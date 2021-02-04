@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<computers>
+  <computer name="Ноутбук">
+    <company>Apple</company>
+    <CPU>Intel</CPU>
+    <GraphAdapter>AMD Radeon Pro 555X</GraphAdapter>
+    <OZU>32 ГБ, SSD 512 ГБ</OZU>
+    <Date>12.05.2002</Date>
+  </computer>
+  <computer name="Ноутбук">
+    <company>Dell</company>
+    <CPU>Intel</CPU>
+    <GraphAdapter>NVIDIA GeForce MX230</GraphAdapter>
+    <OZU>32 ГБ, SSD 256 ГБ</OZU>
+    <Date>31.05/2001</Date>
+  </computer>
+  <computer name="Ноутбук">
+    <company>Apple</company>
+    <CPU>Intel</CPU>
+    <GraphAdapter>AMD Radeon Pro 5300M</GraphAdapter>
+    <OZU>64 ГБ, SSD 256 ГБ</OZU>
+    <Date>31.05.2000</Date>
+  </computer>
+</computers>
