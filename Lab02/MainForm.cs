@@ -50,7 +50,7 @@ namespace Lab02
             {
                 comboBox3.Items.Clear();
                 comboBox3.Items.Add("Apple");
-                comboBox3.Items.Add("Aser");
+                comboBox3.Items.Add("Acer");
                 comboBox3.Items.Add("Dell");
             }
             if(comboBox1.Text == "Сервер")
@@ -199,6 +199,361 @@ namespace Lab02
             }
             doc.Save("Computers.xml");
 
+
+
+        }
+
+        Point lastpoint;
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastpoint.X;
+                this.Top += e.Y - lastpoint.Y;
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastpoint = new Point(e.X, e.Y);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime dt;
+            if (!DateTime.TryParse(textBox1.Text, out dt))
+            {
+                MessageBox.Show("Введите корректную дату");
+                return;
+            }
+
+            decimal price = 0;
+
+            if(comboBox3.Text == "Acer")
+            {
+                if(ProcField.Text == "Intel")
+                {
+                    price += 100;
+                    if(GraphAdapterField.Text == "NVIDIA GeForce GTX 1650")
+                    {
+                        price += 400;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ") 
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+                    }
+                    else if(GraphAdapterField.Text == "NVIDIA GeForce GTX 1660")
+                    {
+                        price += 500;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+
+                    }
+                    else if(GraphAdapterField.Text == "NVIDIA GeForce GTX 1500")
+                    {
+                        price += 350;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+                    }
+                }
+                else if(ProcField.Text == "AMD")
+                {
+                    price += 120;
+                    if (GraphAdapterField.Text == "NVIDIA GeForce GTX 1650")
+                    {
+                        price += 400;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce GTX 1660")
+                    {
+                        price += 500;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce GTX 1500")
+                    {
+                        price += 350;
+                        if (MemoryField.Text == "16 ГБ, SSD 256 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 350;
+                        }
+                        else if (MemoryField.Text == "4 ГБ, SSD 128 ГБ")
+                        {
+                            price += 310;
+                        }
+                    }
+                }
+            }
+            else if (comboBox3.Text == "Apple")
+            {
+                if (ProcField.Text == "Intel")
+                {
+                    price += 150;
+                    if (GraphAdapterField.Text == "AMD Radeon Pro 5300M")
+                    {
+                        price += 600;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "AMD Radeon Pro 555X")
+                    {
+                        price += 650;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "AMD Radeon Pro 5300M")
+                    {
+                        price += 550;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                }
+                else if (ProcField.Text == "AMD")
+                {
+                    price += 170;
+                    if (GraphAdapterField.Text == "AMD Radeon Pro 5300M")
+                    {
+                        price += 600;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "AMD Radeon Pro 555X")
+                    {
+                        price += 650;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "AMD Radeon Pro 5300M")
+                    {
+                        price += 550;
+                        if (MemoryField.Text == "64 ГБ, SSD 256 ГБ")
+                        {
+                            price += 750;
+                        }
+                        else if (MemoryField.Text == "32 ГБ, SSD 512 ГБ")
+                        {
+                            price += 650;
+                        }
+                        else if (MemoryField.Text == "64 ГБ, SSD 512 ГБ")
+                        {
+                            price += 1100;
+                        }
+                    }
+                }
+            }
+            else if(comboBox3.Text == "Dell")
+            {
+                if (ProcField.Text == "Intel")
+                {
+                    price += 200;
+                    if (GraphAdapterField.Text == "NVIDIA GeForce MX230")
+                    {
+                        price += 350;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce MV250")
+                    {
+                        price += 450;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce RTX 2060")
+                    {
+                        price += 550;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+
+                }
+                else if (ProcField.Text == "AMD")
+                {
+                    price += 180;
+                    if (GraphAdapterField.Text == "NVIDIA GeForce MX230")
+                    {
+                        price += 350;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce MV250")
+                    {
+                        price += 450;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+                    else if (GraphAdapterField.Text == "NVIDIA GeForce RTX 2060")
+                    {
+                        price += 550;
+                        if (MemoryField.Text == "32 ГБ, SSD 256 ГБ")
+                        {
+                            price += 550;
+                        }
+                        else if (MemoryField.Text == "16 ГБ, SSD 512 ГБ")
+                        {
+                            price += 450;
+                        }
+                        else if (MemoryField.Text == "8 ГБ, SSD 256 ГБ")
+                        {
+                            price += 400;
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("Ваш кампухтер стоит - " + Convert.ToString(price) + "$");
 
         }
     }

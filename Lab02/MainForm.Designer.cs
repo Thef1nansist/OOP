@@ -30,16 +30,16 @@
         {
             this.labe1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MemoryField = new System.Windows.Forms.ComboBox();
+            this.GraphAdapterField = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.ProcField = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonlog = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ProcField = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.GraphAdapterField = new System.Windows.Forms.ComboBox();
-            this.MemoryField = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,80 @@
             this.panel2.Size = new System.Drawing.Size(654, 304);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
+            this.textBox1.Location = new System.Drawing.Point(58, 250);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(243, 20);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
+            // MemoryField
+            // 
+            this.MemoryField.FormattingEnabled = true;
+            this.MemoryField.Location = new System.Drawing.Point(58, 204);
+            this.MemoryField.Name = "MemoryField";
+            this.MemoryField.Size = new System.Drawing.Size(243, 21);
+            this.MemoryField.TabIndex = 10;
+            this.MemoryField.Enter += new System.EventHandler(this.MemoryField_Enter);
+            // 
+            // GraphAdapterField
+            // 
+            this.GraphAdapterField.FormattingEnabled = true;
+            this.GraphAdapterField.Location = new System.Drawing.Point(58, 161);
+            this.GraphAdapterField.Name = "GraphAdapterField";
+            this.GraphAdapterField.Size = new System.Drawing.Size(243, 21);
+            this.GraphAdapterField.TabIndex = 9;
+            this.GraphAdapterField.Enter += new System.EventHandler(this.GraphAdapterField_Enter);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(58, 69);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(243, 21);
+            this.comboBox3.TabIndex = 8;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.MouseEnter += new System.EventHandler(this.comboBox3_MouseEnter);
+            // 
+            // ProcField
+            // 
+            this.ProcField.FormattingEnabled = true;
+            this.ProcField.Location = new System.Drawing.Point(58, 114);
+            this.ProcField.Name = "ProcField";
+            this.ProcField.Size = new System.Drawing.Size(243, 21);
+            this.ProcField.TabIndex = 7;
+            this.ProcField.Enter += new System.EventHandler(this.ProcField_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(58, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(243, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(114)))), ((int)(((byte)(43)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(48)))), ((int)(((byte)(8)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(61)))), ((int)(((byte)(7)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(440, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 41);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Рассчитать $";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonlog
             // 
@@ -116,77 +190,6 @@
             this.button2.Text = "x";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(114)))), ((int)(((byte)(43)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(48)))), ((int)(((byte)(8)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(61)))), ((int)(((byte)(7)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(440, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Рассчитать $";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(58, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(243, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
-            // 
-            // ProcField
-            // 
-            this.ProcField.FormattingEnabled = true;
-            this.ProcField.Location = new System.Drawing.Point(58, 114);
-            this.ProcField.Name = "ProcField";
-            this.ProcField.Size = new System.Drawing.Size(243, 21);
-            this.ProcField.TabIndex = 7;
-            this.ProcField.Enter += new System.EventHandler(this.ProcField_Enter);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(58, 69);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(243, 21);
-            this.comboBox3.TabIndex = 8;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            this.comboBox3.MouseEnter += new System.EventHandler(this.comboBox3_MouseEnter);
-            // 
-            // GraphAdapterField
-            // 
-            this.GraphAdapterField.FormattingEnabled = true;
-            this.GraphAdapterField.Location = new System.Drawing.Point(58, 161);
-            this.GraphAdapterField.Name = "GraphAdapterField";
-            this.GraphAdapterField.Size = new System.Drawing.Size(243, 21);
-            this.GraphAdapterField.TabIndex = 9;
-            this.GraphAdapterField.Enter += new System.EventHandler(this.GraphAdapterField_Enter);
-            // 
-            // MemoryField
-            // 
-            this.MemoryField.FormattingEnabled = true;
-            this.MemoryField.Location = new System.Drawing.Point(58, 204);
-            this.MemoryField.Name = "MemoryField";
-            this.MemoryField.Size = new System.Drawing.Size(243, 21);
-            this.MemoryField.TabIndex = 10;
-            this.MemoryField.Enter += new System.EventHandler(this.MemoryField_Enter);
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(58, 250);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 20);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // MainForm
             // 
