@@ -11,14 +11,27 @@ using System.Windows.Forms;
 
 namespace Lab02
 {
+    public static class GetLog
+    {
+        public static string val;
+
+        public static string Loggeter(string log)
+        {
+            val = log;
+
+            return log;
+        }
+    }
+    
     public partial class LogForm : Form
     {
+        
         public LogForm()
         {
             InitializeComponent();
             this.PassField.AutoSize = false;
             this.PassField.Size = new Size(this.PassField.Size.Width, 49);
-           
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -75,6 +88,8 @@ namespace Lab02
             DataBase dataBase = new DataBase();
             dataBase.OpenConnection();
 
+            
+
             DataTable dataTable = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -91,6 +106,7 @@ namespace Lab02
                 this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
+                GetLog.Loggeter(loginUser);
             }
 
             else
@@ -104,5 +120,6 @@ namespace Lab02
             RegForm regForm = new RegForm();
             regForm.Show();
         }
+       
     }
 }

@@ -2,7 +2,6 @@ D:\OOP\Lab02\bin\Debug\Lab02.exe.config
 D:\OOP\Lab02\bin\Debug\Lab02.exe
 D:\OOP\Lab02\bin\Debug\Lab02.pdb
 D:\OOP\Lab02\obj\Debug\Lab02.csprojAssemblyReference.cache
-D:\OOP\Lab02\obj\Debug\Lab02.LogForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.Properties.Resources.resources
 D:\OOP\Lab02\obj\Debug\Lab02.csproj.GenerateResource.cache
 D:\OOP\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
@@ -25,3 +24,4 @@ D:\OOP\Lab02\obj\Debug\Lab02.exe.config
 D:\OOP\Lab02\obj\Debug\Lab02.csproj.CopyComplete
 D:\OOP\Lab02\obj\Debug\Lab02.RegForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.MainForm.resources
+D:\OOP\Lab02\obj\Debug\Lab02.GetLog.resources

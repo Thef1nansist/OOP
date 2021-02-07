@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -555,6 +556,31 @@ namespace Lab02
 
             MessageBox.Show("Ваш кампухтер стоит - " + Convert.ToString(price) + "$");
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LogForm logForm = new LogForm();
+            DataBase dataBase = new DataBase();
+            string login = GetLog.val;
+            MySqlCommand connection = new MySqlCommand("INSERT INTO `computers` (`Type`, `CPU`, `Graph`, `OZU`, `Date`, `TypeOfComputer`,`User` ) VALUES (@Ty, @CP, @Gr, @OZ, @Dt, @TC, @Us);", dataBase.GetConnection());
+            connection.Parameters.Add("@Ty", MySqlDbType.VarChar).Value = comboBox1.Text;
+            connection.Parameters.Add("@CP", MySqlDbType.VarChar).Value = ProcField.Text;
+            connection.Parameters.Add("@Gr", MySqlDbType.VarChar).Value = GraphAdapterField.Text;
+            connection.Parameters.Add("@OZ", MySqlDbType.VarChar).Value = MemoryField.Text;
+            connection.Parameters.Add("@Dt", MySqlDbType.VarChar).Value = textBox1.Text;
+            connection.Parameters.Add("@TC", MySqlDbType.VarChar).Value = comboBox3.Text;
+            connection.Parameters.Add("@Us", MySqlDbType.VarChar).Value = login;
+
+            dataBase.OpenConnection();
+
+            if (connection.ExecuteNonQuery() == 1)
+                MessageBox.Show("Запись была добавлена в базу");
+            else
+                MessageBox.Show("Запись не была добавлена в базу");
+
+
+            dataBase.CloseConnection();
         }
     }
 }
