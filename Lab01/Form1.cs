@@ -40,32 +40,54 @@ namespace Lab01
         private void button1_Click(object sender, EventArgs e)
         {
             double value1, value2;
+
+            
+          
             value1 = Convert.ToDouble(textBox1.Text);
             value2 = Convert.ToDouble(textBox2.Text);
+
+            
+
 
             switch (comboBox1.Text)
             {
                 case "+":
-                    textBox3.Text = Convert.ToString(value1 + value2);
+                    textBox3.Text = ConvertToString(value1 + value2);
+
+                    comboBox2.Items.Add(textBox3.Text);
                     break;
                 case "-":
-                    textBox3.Text = Convert.ToString(value1 - value2);
+                    textBox3.Text = ConvertToString(value1 - value2);
+               
                     break;
                 case "*":
-                    textBox3.Text = Convert.ToString(value1 * value2);
+                    textBox3.Text = ConvertToString(value1 * value2);
+                   
                     break;
                 case "/":
                     if (value2 == 0) textBox3.Text = "Ты серьёзно пытаешься делить на ноль?)";
-                    else textBox3.Text = Convert.ToString(value1 / value2);
-                    break;
+                    else
+                    {
+                        textBox3.Text = ConvertToString(value1 / value2);
+                     
+                    }
+                        break;
                 case "%":
                     if (value2 == 0 || value1 == 0) textBox3.Text = "я так не умею:(";
-                    else textBox3.Text = Convert.ToString(value1 % value2);
-                    break;
+                    else
+                    {
+                        textBox3.Text = ConvertToString(value1 % value2);
+                    
+                    }
+                        break;
                 case "%/":
-                    if(value2 == 0) textBox3.Text = "Ты серьёзно пытаешься делить на ноль?)";
-                    else textBox3.Text = Convert.ToString((int)value1 / (int)value2);
-                    break;
+                    if (value2 == 0) textBox3.Text = "Ты серьёзно пытаешься делить на ноль?)";
+                    else
+                    {
+                        textBox3.Text = ConvertToString((int)value1 / (int)value2);
+             
+                    }
+                        break;
             }
         }
 
@@ -81,6 +103,30 @@ namespace Lab01
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+             if (e.KeyChar<=47 || e.KeyChar >=58)
+            {
+                e.Handled = true;
+            }
+        }
+
+        public string ConvertToString(double value)
+        {
+            return Convert.ToString(value);
         }
     }
 }
