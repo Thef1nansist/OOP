@@ -25,3 +25,6 @@ D:\OOP\Lab02\obj\Debug\Lab02.csproj.CopyComplete
 D:\OOP\Lab02\obj\Debug\Lab02.RegForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.MainForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.GetLog.resources
+D:\OOP\Lab02\obj\Debug\Lab02.SearchForm.resources
+D:\OOP\Lab02\obj\Debug\Lab02.SortForm.resources
+D:\OOP\Lab02\obj\Debug\Lab02.AddAndSave.resources

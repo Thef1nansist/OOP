@@ -63,6 +63,16 @@ namespace Lab02.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_728918 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_728918", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_lock_safe_password_2992204__1_ {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_lock_safe_password_2992204 (1)", resourceCulture);

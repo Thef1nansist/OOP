@@ -34,19 +34,19 @@
             this.buttonreg = new System.Windows.Forms.Button();
             this.LoginField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.reglabel = new System.Windows.Forms.Label();
             this.passwordField = new System.Windows.Forms.TextBox();
             this.loginF = new System.Windows.Forms.TextBox();
             this.surename = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.reglabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +88,7 @@
             this.labe1.Text = "Регистрация";
             this.labe1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labe1.UseCompatibleTextRendering = true;
+            this.labe1.Click += new System.EventHandler(this.labe1_Click);
             // 
             // buttonreg
             // 
@@ -136,6 +137,19 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
+            // reglabel
+            // 
+            this.reglabel.AutoSize = true;
+            this.reglabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reglabel.ForeColor = System.Drawing.Color.White;
+            this.reglabel.Location = new System.Drawing.Point(241, 364);
+            this.reglabel.Name = "reglabel";
+            this.reglabel.Size = new System.Drawing.Size(116, 16);
+            this.reglabel.TabIndex = 12;
+            this.reglabel.Text = "Авторизоваться";
+            this.reglabel.Click += new System.EventHandler(this.reglabel_Click);
+            // 
             // passwordField
             // 
             this.passwordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -157,6 +171,7 @@
             this.loginF.Name = "loginF";
             this.loginF.Size = new System.Drawing.Size(225, 39);
             this.loginF.TabIndex = 10;
+            this.loginF.TextChanged += new System.EventHandler(this.loginF_TextChanged);
             this.loginF.Enter += new System.EventHandler(this.loginF_Enter);
             this.loginF.Leave += new System.EventHandler(this.loginF_Leave);
             this.loginF.MouseEnter += new System.EventHandler(this.loginF_MouseEnter);
@@ -186,6 +201,26 @@
             this.username.Enter += new System.EventHandler(this.username_Enter);
             this.username.Leave += new System.EventHandler(this.username_Leave);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Lab02.Properties.Resources.iconfinder_lock_safe_password_2992204__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(304, 243);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lab02.Properties.Resources.iconfinder_users_10_984119;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 243);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Lab02.Properties.Resources.iconfinder_users_10_984119;
@@ -195,39 +230,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // reglabel
-            // 
-            this.reglabel.AutoSize = true;
-            this.reglabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reglabel.ForeColor = System.Drawing.Color.White;
-            this.reglabel.Location = new System.Drawing.Point(241, 364);
-            this.reglabel.Name = "reglabel";
-            this.reglabel.Size = new System.Drawing.Size(116, 16);
-            this.reglabel.TabIndex = 12;
-            this.reglabel.Text = "Авторизоваться";
-            this.reglabel.Click += new System.EventHandler(this.reglabel_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lab02.Properties.Resources.iconfinder_users_10_984119;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 243);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Lab02.Properties.Resources.iconfinder_lock_safe_password_2992204__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(295, 243);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
             // 
             // RegForm
             // 
@@ -242,9 +244,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

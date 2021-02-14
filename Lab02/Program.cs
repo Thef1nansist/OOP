@@ -16,7 +16,7 @@ namespace Lab02
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogForm());
+            Application.Run(new MainForm());
         }
     }
 }

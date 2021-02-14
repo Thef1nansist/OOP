@@ -230,5 +230,15 @@ namespace Lab02
             LogForm logForm = new LogForm();
             logForm.Show();
         }
+
+        private void loginF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labe1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
