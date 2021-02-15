@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAndSave));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.sortbtn = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,14 +42,17 @@
             this.ProcField = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.sortbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,54 +76,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(648, 365);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.sortbtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(343, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 365);
-            this.panel2.TabIndex = 29;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Lab02.Properties.Resources.iconfinder_Cancel_728918;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(72, 212);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(144, 40);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // sortbtn
-            // 
-            this.sortbtn.BackColor = System.Drawing.Color.Turquoise;
-            this.sortbtn.FlatAppearance.BorderSize = 0;
-            this.sortbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.sortbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortbtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sortbtn.ForeColor = System.Drawing.Color.White;
-            this.sortbtn.Image = ((System.Drawing.Image)(resources.GetObject("sortbtn.Image")));
-            this.sortbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sortbtn.Location = new System.Drawing.Point(72, 104);
-            this.sortbtn.Name = "sortbtn";
-            this.sortbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sortbtn.Size = new System.Drawing.Size(147, 40);
-            this.sortbtn.TabIndex = 47;
-            this.sortbtn.Text = "Save In BD";
-            this.sortbtn.UseVisualStyleBackColor = false;
-            this.sortbtn.Click += new System.EventHandler(this.sortbtn_Click);
             // 
             // pictureBox5
             // 
@@ -232,6 +184,55 @@
             this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 49;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.sortbtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(343, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(305, 365);
+            this.panel2.TabIndex = 29;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Turquoise;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Lab02.Properties.Resources.iconfinder_Cancel_728918;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(72, 212);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(144, 40);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // sortbtn
+            // 
+            this.sortbtn.BackColor = System.Drawing.Color.Turquoise;
+            this.sortbtn.FlatAppearance.BorderSize = 0;
+            this.sortbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.sortbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortbtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortbtn.ForeColor = System.Drawing.Color.White;
+            this.sortbtn.Image = ((System.Drawing.Image)(resources.GetObject("sortbtn.Image")));
+            this.sortbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sortbtn.Location = new System.Drawing.Point(72, 104);
+            this.sortbtn.Name = "sortbtn";
+            this.sortbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.sortbtn.Size = new System.Drawing.Size(147, 40);
+            this.sortbtn.TabIndex = 47;
+            this.sortbtn.Text = "Save In BD";
+            this.sortbtn.UseVisualStyleBackColor = false;
+            this.sortbtn.Click += new System.EventHandler(this.sortbtn_Click);
+            // 
             // AddAndSave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,13 +243,13 @@
             this.Name = "AddAndSave";
             this.Text = "AddAndSave";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

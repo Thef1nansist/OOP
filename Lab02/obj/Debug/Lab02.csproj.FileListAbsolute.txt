@@ -28,3 +28,4 @@ D:\OOP\Lab02\obj\Debug\Lab02.GetLog.resources
 D:\OOP\Lab02\obj\Debug\Lab02.SearchForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.SortForm.resources
 D:\OOP\Lab02\obj\Debug\Lab02.AddAndSave.resources
+D:\OOP\Lab02\obj\Debug\Lab02.PersonForm.resources

@@ -99,5 +99,15 @@ namespace Lab02.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_users_10_984119__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_users-10_984119 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel.Design;
+
 
 namespace Lab02
 {
@@ -83,6 +85,7 @@ namespace Lab02
 
         private void buttonlog_Click(object sender, EventArgs e)
         {
+            //[Required]
             String loginUser = LoginField.Text;
             String passUser = PassField.Text;
             DataBase dataBase = new DataBase();
